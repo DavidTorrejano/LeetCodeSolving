@@ -51,19 +51,10 @@ public class ValidRomanNumber {
                 char b = s.charAt(i + 1);
                 cont = a==b ? cont + 1 : 0;
 
-                if (a== 'V' && b== 'V'){
-                    letters.clear();
-                    return letters;
-                } else if (a== 'L' && b== 'L') {
-                    letters.clear();
-                    return letters;
-                } else if (a== 'D' && b== 'D') {
-                    letters.clear();
-                    return letters;
-                }
+                if (a== 'V' || a== 'L' || a== 'D') cont = a == b? 5 : 0;
             }
 
-            if (isRoman && cont<3){
+            if (isRoman && cont<3) {
                 letters.add(s.charAt(i));
             }
             else{

@@ -6,12 +6,12 @@ public class Main {
 
         RomanToInteger romanToInteger = new RomanToInteger();
 
-        String romanos = "CXX";
+        String romanos = "XVIII";
 
         int number = romanToInteger.romanToInteger(romanos.toUpperCase().trim());
 
-        if (number== -1){
-            System.out.println("No se permite usar V, L o D para restarse a otro número");
+        if (number== 0){
+            System.out.println("El número dado tiene algo incorrecto.");
         }else {
             System.out.println("De romanos " + romanos + " a enteros es: " + number);
         }
