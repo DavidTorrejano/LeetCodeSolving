@@ -28,8 +28,17 @@ public class ValidRomanNumber {
         NUMS.put('M', 1000);
     }
 
-//    This method verify if the typed string contains only roman characters
-
+/**
+ * With this method we do some verification:
+ * @param s this receives a string of characters,
+ * In the first if inside the "for" we verify if a character is repeated more than
+ * three times, for everytime it repeats add 1 to the variable "cont",
+ * the value is verified at the end, in the last "if".
+ * the nested "if" verifies if a character such as V, L or D
+ * is before any other character greater than them, if that happens
+ * the program will return nothing.
+ * @return ArrayList
+ * */
     public ArrayList<Character> verifyRomanNumber(String s){
         ArrayList <Character> letters = new ArrayList<>();
         int cont = 0;
